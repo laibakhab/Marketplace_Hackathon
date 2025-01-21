@@ -18,5 +18,9 @@ export interface Product{
     tags: string;
     description : string;
     dicountPercentage : number;
-    isNew : boolean
+    isNew : boolean;
+    // id: {
+    //     _type :"id"
+    //     current : string;
+    // }
 }

@@ -1,10 +1,13 @@
 
 "use client";
 
+import Trophy from "../../../public/trophy 1.png"
+import Guarantee from "../../../public/guarantee.png"
+import Shipping from "../../../public/guarantee.png"
+import Suport from "../../../public/customer-support.png"
 import React, { useEffect, useState } from 'react';
-// import Link from 'next/link';
 import { Award, ShieldCheck, ChevronRightIcon, Truck, Headphones } from 'lucide-react';
-// import Image from 'next/image';
+
 import Logo from '../../../public/Meubel-l.png';
 import Rectangle from '../../../public/Rectangle.png';
 import Image from "next/image";
@@ -12,6 +15,8 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { Product } from "../../../types/products";
 import { allProducts } from "@/sanity/lib/queries";
+import Link from "next/link";
+
 
 export default function FeaturesBanner() {
 
@@ -64,6 +69,7 @@ export default function FeaturesBanner() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                   {product.map((product) => ( 
                     <div key={product._id} className="border rounded-lg shadow-md p-4"> 
+                      {/* <Link href={`/product/${product.id.current}`}> */}
                       {product.productImage && (
                         <Image
                           src={urlFor(product.productImage).url()}
@@ -77,6 +83,7 @@ export default function FeaturesBanner() {
                       <p className="text-gray-500 mt-2">
                         {product.price ? `$${product.price}` : "Price not available"}
                       </p>
+                      {/* </Link> */}
                     </div>
                   ))}
                 </div>
@@ -91,26 +98,43 @@ export default function FeaturesBanner() {
 
       </nav>
       
-      <section>
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div key={index} className="flex items-center gap-4 p-6 h-[70px] px-[53px]">
-                  <div className="flex-shrink-0">
-                    {Icon && <Icon className="w-10 h-10 md:w-12 md:h-12 text-gray-800" strokeWidth={1.5} />}
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">{feature.title}</h3>
-                    <p className="text-sm text-gray-600">{feature.description}</p>
-                  </div>
-                </div>
-              );
-            })}
+      <div className='w-full mx-auto h-[270px] top-[2699px] left-[-3px] justify-between pt-[100px] pb-[100px] mt-10 bg-[#FAF3EA]'>        
+   <div className='w-[1334px] h-[70px] justify-between flex  ml-14'>
+                     <div className='w-[337px] h-[70px] gap-[10px]  flex'>
+            <Image src={Trophy} alt="icon" width={60} height={60} />
+            <div className='w-[267px] h-[70px] gap-[2px] '>
+              <p className='w-[157px] h-[38px] font-semibold text-[25px] leading-9'>High Quality</p>
+              <p className='w-[267px] h-[30px] font-medium text-[20px] leading-[30px]'>crafted from top materials</p>
+            </div>
           </div>
-        </div>
-      </section>
+
+           <div className='w-[328px] h-[70px] gap-[10px]  flex'>
+             <Image src={Guarantee} alt="icon" width={60} height={60} />
+             <div className='w-[267px] h-[70px] gap-[2px] '>
+               <p className='w-[258px] h-[38px] font-semibold text-[25px] leading-9'>Warrant Protection</p>
+               <p className='w-[126px] h-[30px] font-medium text-[20px] leading-[30px]'>Over 2 years</p>
+             </div>
+           </div>
+
+           <div className='w-[244px] h-[70px] gap-[10px]  flex'>
+             <Image src={Shipping} alt="icon" width={60} height={60} />
+             <div className='w-[267px] h-[70px] gap-[2px] '>
+               <p className='w-[200px] h-[38px] font-semibold text-[25px] leading-9'>Free Shipping</p>
+               <p className='w-[267px] h-[30px] font-medium text-[20px] leading-[30px]'>Oder over 150 $ </p>
+             </div>
+           </div>
+          
+           <div className='w-[337px] h-[70px] gap-[10px]  flex'>
+             <Image src={Suport} alt="icon" width={60} height={60} />
+             <div className='w-[267px] h-[70px] gap-[2px] '>
+               <p className='w-[200px] h-[38px] font-semibold text-[25px] leading-9'>24 / 7 Support</p>
+               <p className='w-[267px] h-[30px] font-medium text-[20px] leading-[30px]'>Dedicated Support</p>
+             </div>
+           </div>
+
+         </div>
+       </div>
+
     </div>
   );
 }

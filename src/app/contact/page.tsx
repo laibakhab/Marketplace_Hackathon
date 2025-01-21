@@ -3,35 +3,17 @@ import Image from 'next/image';
 import Rectangle from '../../../public/Rectangle.png';
 import { MapPin, ChevronRightIcon, Phone, Clock, Award, ShieldCheck, Truck, Headphones } from 'lucide-react';
 import Logo from '../../../public/Meubel-l.png';
-import Link from 'next/link';
+import Trophy from "../../../public/trophy 1.png"
+import Guarantee from "../../../public/guarantee.png"
+import Shipping from "../../../public/guarantee.png"
+import Suport from "../../../public/customer-support.png"
 
 
 
 
   export default function FeaturesBanner() {
-    const features = [
-      {
-        icon: Award,
-        title: "High Quality",
-        description: "crafted from top materials"
-      },
-      {
-        icon: ShieldCheck,
-        title: "Warranty Protection",
-        description: "Over 2 years"
-      },
-      {
-        icon: Truck,
-        title: "Free Shipping",
-        description: "Order over 150 $"
-      },
-      {
-        icon: Headphones,
-        title: "24 / 7 Support",
-        description: "Dedicated support"
-      },
-      
-    ]
+   
+    
 
   return (
   
@@ -114,7 +96,7 @@ import Link from 'next/link';
             <input
               id="name"
               type="text"
-              placeholder="Abc"
+              placeholder="Enter your name"
               required
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#B5873A] focus:border-transparent"
             />
@@ -130,7 +112,7 @@ import Link from 'next/link';
             <input
               id="email"
               type="email"
-              placeholder="Abc@def.com"
+              placeholder="example@email.com"
               required
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#B5873A] focus:border-transparent"
             />
@@ -146,7 +128,7 @@ import Link from 'next/link';
             <input
               id="subject"
               type="text"
-              placeholder="This is an optional"
+              placeholder="Enter your subject"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#B5873A] focus:border-transparent"
             />
           </div>
@@ -160,7 +142,7 @@ import Link from 'next/link';
             </label>
             <textarea
               id="message"
-              placeholder="Hi! I'd like to ask about"
+              placeholder="Enter your message"
               required
               rows={4}
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#B5873A] focus:border-transparent resize-y min-h-[120px]"
@@ -177,34 +159,44 @@ import Link from 'next/link';
       </div>
     
     </div>
-    <section className="bg-[#FDF6F0] h-[270px]  md:py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {features.map((feature, index) => {
-            const Icon = feature.icon
-            return (
-              <div 
-                key={index}
-                className="flex items-center gap-4 p-[100px] h-[70px] px-[53px] "
-              >
-                <div className="flex-shrink-0">
-                  <Icon className="w-10 h-10 md:w-12 md:h-12 text-gray-800" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </section>
+{/* end */}
+    <div className='w-full mx-auto h-[270px] top-[2699px] left-[-3px] justify-between pt-[100px] pb-[100px] mt-10 bg-[#FAF3EA]'>        
+   <div className='w-[1334px] h-[70px] justify-between flex  ml-14'>
+                     <div className='w-[337px] h-[70px] gap-[10px]  flex'>
+            <Image src={Trophy} alt="icon" width={60} height={60} />
+            <div className='w-[267px] h-[70px] gap-[2px] '>
+              <p className='w-[157px] h-[38px] font-semibold text-[25px] leading-9'>High Quality</p>
+              <p className='w-[267px] h-[30px] font-medium text-[20px] leading-[30px]'>crafted from top materials</p>
+            </div>
+          </div>
 
+           <div className='w-[328px] h-[70px] gap-[10px]  flex'>
+             <Image src={Guarantee} alt="icon" width={60} height={60} />
+             <div className='w-[267px] h-[70px] gap-[2px] '>
+               <p className='w-[258px] h-[38px] font-semibold text-[25px] leading-9'>Warrant Protection</p>
+               <p className='w-[126px] h-[30px] font-medium text-[20px] leading-[30px]'>Over 2 years</p>
+             </div>
+           </div>
+
+           <div className='w-[244px] h-[70px] gap-[10px]  flex'>
+             <Image src={Shipping} alt="icon" width={60} height={60} />
+             <div className='w-[267px] h-[70px] gap-[2px] '>
+               <p className='w-[200px] h-[38px] font-semibold text-[25px] leading-9'>Free Shipping</p>
+               <p className='w-[267px] h-[30px] font-medium text-[20px] leading-[30px]'>Oder over 150 $ </p>
+             </div>
+           </div>
+          
+           <div className='w-[337px] h-[70px] gap-[10px]  flex'>
+             <Image src={Suport} alt="icon" width={60} height={60} />
+             <div className='w-[267px] h-[70px] gap-[2px] '>
+               <p className='w-[200px] h-[38px] font-semibold text-[25px] leading-9'>24 / 7 Support</p>
+               <p className='w-[267px] h-[30px] font-medium text-[20px] leading-[30px]'>Dedicated Support</p>
+             </div>
+           </div>
+
+         </div>
+       </div>
+    
       
     </div>
   );

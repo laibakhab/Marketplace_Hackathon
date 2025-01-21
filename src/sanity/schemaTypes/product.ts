@@ -1,3 +1,5 @@
+import { sources } from "next/dist/compiled/webpack/webpack"
+import { title } from "process"
 import { defineType } from "sanity"
 
 export const product = defineType({
@@ -44,6 +46,15 @@ export const product = defineType({
             validation: (rule) => rule.required(),
             title:"Discount Percentage",
         },
+        // {
+        //     name:"id",
+        //     type:"id",
+        //     title:"id",
+        //     options: {
+        //         sources:"product"
+        //     }
+        // },
+       
         {
             name:"isNew",
             validation: (rule) => rule.required(),
