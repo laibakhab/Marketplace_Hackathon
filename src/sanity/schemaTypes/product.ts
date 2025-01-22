@@ -20,6 +20,18 @@ export const product = defineType({
             title:"Description",
         },
         {
+        name: "slug",
+      title: "Slug",
+      type: "slug",
+      validation: (rule) => rule.required(),
+      options: {
+        source: "title", // Automatically generates a slug from the product name
+        maxLength: 96
+      },
+    
+      description: "Unique identifier for the product, used in URLs",
+    },
+        {
             name: "productImage",
             type: "image",
             validation: (rule) => rule.required(),
@@ -46,14 +58,7 @@ export const product = defineType({
             validation: (rule) => rule.required(),
             title:"Discount Percentage",
         },
-        // {
-        //     name:"id",
-        //     type:"id",
-        //     title:"id",
-        //     options: {
-        //         sources:"product"
-        //     }
-        // },
+        
        
         {
             name:"isNew",

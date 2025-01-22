@@ -49,8 +49,8 @@ export default function FeaturesBanner() {
     <div>
       <nav>
         <div>
-          <Image src={Rectangle} alt="Image" height={316} className="top-[100px] w-full" />
-          <div className="absolute bottom-[150px] h-[443px]">
+          <Image src={Rectangle} alt="Image" height={316} className=" w-full" />
+          <div className="absolute bottom-[60px] h-[443px]">
             <Image src={Logo} alt="Meuble-1" className="ml-[692px]" />
             <h2 className="w-[124px] h-[72px] ml-[660px] font-medium text-[48px] leading-[72px]">Shop</h2>
             <span className="flex items-center">
@@ -67,9 +67,36 @@ export default function FeaturesBanner() {
           <div className="max-w-6xl mx-auto px-4 py-8">
                 <h1 className=" text-[60px] flex items-center justify-center ">Our Products</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {product.map((product) => ( 
+                {product.map((product) => {
+  if (!product.slug || !product.slug.current) {
+    console.error("Missing slug for product:", product);
+    return null;
+  }
+  return (
+    <div key={product._id} className="border rounded-lg shadow-md p-4">
+      <Link href={`/product/${product.slug.current}`}>
+        {product.productImage && (
+          <Image
+            src={urlFor(product.productImage).url()}
+            alt="image"
+            width={200}
+            height={200}
+            className="w-full h-48 object-cover rounded-md"
+          />
+        )}
+        <h2 className="text-lg font-semibold mt-4">{product.title}</h2>
+        <p className="text-gray-500 mt-2">
+          {product.price ? `$${product.price}` : "Price not available"}
+        </p>
+      </Link>
+    </div>
+  );
+})}
+
+
+                  {/* {product.map((product) => ( 
                     <div key={product._id} className="border rounded-lg shadow-md p-4"> 
-                      {/* <Link href={`/product/${product.id.current}`}> */}
+                      <Link href={`/product/${product.slug.current}`}>
                       {product.productImage && (
                         <Image
                           src={urlFor(product.productImage).url()}
@@ -83,9 +110,9 @@ export default function FeaturesBanner() {
                       <p className="text-gray-500 mt-2">
                         {product.price ? `$${product.price}` : "Price not available"}
                       </p>
-                      {/* </Link> */}
+                      </Link>
                     </div>
-                  ))}
+                  ))} */}
                 </div>
               </div>
 

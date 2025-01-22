@@ -30,12 +30,12 @@ const Blog = () => {
 <div>
         <Image src={Background} alt="Image" height={316} className=" w-full "  />
 
-        <div className="absolute bottom-[150px]  h-[443px]">
-          <Image src={Logo} alt="Meuble-1" className="ml-[710px]" />
-          <h2 className="w-[124px] h-[70px] ml-[700px] font-medium text-[48px] ">Blog</h2>
+        <div className="absolute bottom-[100px]  h-[443px]">
+          <Image src={Logo} alt="Meuble-1" className="ml-[660px]" />
+          <h2 className="w-[124px] h-[70px] ml-[650px] font-medium text-[48px] ">Blog</h2>
 
           <span className="flex items-center">
-            <p className="w-[40px] h-[24px]  ml-[700px] font-[500px] text-[16px] leading-6">Home</p>
+            <p className="w-[40px] h-[24px]  ml-[650px] font-[500px] text-[16px] leading-6">Home</p>
             <ChevronRightIcon
               size={20}
               className="w-5 h-5 sm:cursor-default cursor-pointer sm:hover:text-gray-500 ml-2"
@@ -53,7 +53,7 @@ const Blog = () => {
   <div className=' h-[2550px] top-[-301px] w-full   flex'>
 
 
-      <div className='w-[820px] h-[2490px] top-[-195px] left-[11655px] ml-[150px] mt-16 mr-16 '>
+      <div className='w-full h-[2490px] top-[-195px]   mt-16 mr-16 '>
       
 
              <div className='w-[820px] h-[794px] top-[-195px] left-[11655px]  '>
@@ -169,14 +169,14 @@ const Blog = () => {
     
 
 
-    <div className=' mt-16 '>
-      <div className='w-[393px] h-[537px] top-[-217px] left-[12505px] '>
-      <div className="relative ml-[50px]">
+    <div className=' mt-10 '>
+      <div className='w-[393px] h-[537px] top-[-217px]   '>
+      <div className="relative ml-[10px] ">
     <input type="text" className="w-[311px] h-[58px] pl-10 mt-10 mb-8  border-[1px]" />
     <Search size={24} className="absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-500" />
 </div>
 
-       <div className='w-[251px] h-[300px]   ml-16 '>
+       <div className='w-[251px] h-[300px]   ml-10 '>
         <p className='text-[30px] mb-5' >Categories</p>
         
          <div className='flex gap-48 mb-9'>

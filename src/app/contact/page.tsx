@@ -24,7 +24,7 @@ import Suport from "../../../public/customer-support.png"
       <div>
         <Image src={Rectangle} alt="Image" height={316} className="top-[100px] w-full" />
 
-        <div className="absolute bottom-[150px] h-[443px]">
+        <div className="absolute bottom-[70px] h-[443px]">
           <Image src={Logo} alt="Meuble-1" className="ml-[682px]" />
           <h2 className="w-[124px] h-[72px] ml-[622px] font-medium text-[48px] leading-[72px]">Contact</h2>
 
