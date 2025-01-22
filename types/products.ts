@@ -22,6 +22,6 @@ export interface Product{
     // id: {
     //     _type :"id"
     //     current : string;
-    // }.......
+    // }........
 
 }
