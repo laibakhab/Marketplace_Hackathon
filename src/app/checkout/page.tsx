@@ -16,6 +16,9 @@ import Trophy from "../../../public/trophy 1.png"
 import Guarantee from "../../../public/guarantee.png"
 import Shipping from "../../../public/guarantee.png"
 import Support from "../../../public/customer-support.png"
+import Logo from '../../../public/Meubel House_Logos-05.png'
+import Rectangle from '../../../public/Rectangle.png';
+import { ChevronRightIcon } from "lucide-react";
 
 
 
@@ -95,7 +98,21 @@ const Checkout =  () => {
 
 
   return (
+    <div>
+      <div className="relative">
+        <Image src={Rectangle} alt="Background Image" height={316} className="w-full object-cover" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center ">
+          <Image src={Logo} alt="Meuble Logo" className="max-w-[200px] size-10 sm:max-w-[300px] " />
+          <h2 className=" sm:text-3xl font-medium text-gray-800">Checkout</h2>
+          <div className="flex items-center space-x-2  text-gray-600 text-[13px] ">
+            <p className="font-medium">Home</p>
+            <ChevronRightIcon size={18} />
+            <p className="font-light">Checkout</p>
+          </div>
+        </div>
+      </div>
     <div className="container mx-auto px-4 py-8">
+      
       <div className="grid gap-8 lg:grid-cols-2">
         <div className="space-y-6">
           <h2 className="text-2xl font-bold">Billing details</h2>
@@ -130,7 +147,7 @@ const Checkout =  () => {
             <Input id="email" value={formValues.email} onChange={handleInputChange} type="email" />
           </div>
         </div>
-        <div className="space-y-6">
+        <div className="space-y-6 mt-[10px]">
           <Card>
             <CardContent className="p-6">
               <h3 className="text-lg font-semibold mb-4">Order Summary</h3>
@@ -211,6 +228,7 @@ const Checkout =  () => {
 
 
 
+    </div>
     </div>
   );
 };

@@ -19,7 +19,7 @@ const StripePayment = () => {
     const amount = 49.99;
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100 p-6">
+        <div className="min-h-screen flex items-center justify-center  p-6">
             <div className="max-w-lg w-full bg-white shadow-lg rounded-2xl p-6 space-y-6">
                 <h1 className="text-2xl font-semibold text-gray-800 text-center">Secure Payment</h1>
                 <p className="text-lg text-gray-600 text-center">Complete your purchase safely and securely.</p>

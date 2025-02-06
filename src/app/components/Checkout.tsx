@@ -86,7 +86,7 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
 
   useEffect(() => {
     // Fetch clientSecret from the backend
-    fetch("/api/create-payment-intent", {
+    fetch("/api/payment", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount }),

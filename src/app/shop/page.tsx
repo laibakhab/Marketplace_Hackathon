@@ -36,24 +36,18 @@ export default function FeaturesBanner() {
   return (
     <div>
       <nav>
-      <div className="relative w-full">
-      {/* Background Image */}
-      <Image src={Rectangle} alt="Background Image" height={316} className="w-full object-cover" />
-
-      {/* Content Box */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center ">
-        <Image src={Logo} alt="Meuble Logo" className="w-[70px] sm:w-[40px] " />
-
-        <h2 className="text-3xl  text-gray-800">Shop</h2>
-
-        {/* Breadcrumbs */}
-        <div className="flex items-center space-x-2  text-gray-600 text-sm sm:text-base">
-          <Link href = {"/"} > <p className="font-medium">Home</p></Link>
-          <ChevronRightIcon size={18} />
-          <p className="font-light">Shop</p>
+      <div className="relative">
+        <Image src={Rectangle} alt="Background Image" height={316} className="w-full object-cover" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center ">
+          <Image src={Logo} alt="Meuble Logo" className="max-w-[200px] size-10 sm:max-w-[300px] " />
+          <h2 className=" sm:text-3xl font-medium text-gray-800">Shop</h2>
+          <div className="flex items-center space-x-2  text-gray-600 text-[13px] ">
+            <p className="font-medium">Home</p>
+            <ChevronRightIcon size={18} />
+            <p className="font-light">Shop</p>
+          </div>
         </div>
       </div>
-    </div>
         {/* fetch product */}
 
 

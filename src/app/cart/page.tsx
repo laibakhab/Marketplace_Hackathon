@@ -78,12 +78,12 @@ const ShoppingCart = () => {
 
   return (
     <div>
-      <div className="relative w-full">
+      <div className="relative">
         <Image src={Rectangle} alt="Background Image" height={316} className="w-full object-cover" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-          <Image src={Logo} alt="Meuble Logo" className="w-[80px] sm:w-[120px] mb-4" />
-          <h2 className="text-2xl sm:text-4xl font-medium text-gray-800">Cart</h2>
-          <div className="flex items-center space-x-2 mt-2 text-gray-600 text-sm sm:text-base">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center ">
+          <Image src={Logo} alt="Meuble Logo" className="max-w-[200px] size-10 sm:max-w-[300px] " />
+          <h2 className=" sm:text-3xl font-medium text-gray-800">Cart</h2>
+          <div className="flex items-center space-x-2  text-gray-600 text-[13px] ">
             <p className="font-medium">Home</p>
             <ChevronRightIcon size={18} />
             <p className="font-light">Cart</p>
