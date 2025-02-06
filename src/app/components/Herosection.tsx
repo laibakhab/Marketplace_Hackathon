@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import BG from "../../../public/BG.png";
+import Link from "next/link";
 
 export default function Herosection() {
   return (
@@ -17,7 +18,7 @@ export default function Herosection() {
       </div>
 
     
-      <div className="relative mx-auto mt-10 lg:mt-0 lg:ml-[739px] lg:top-1/3 bg-[#FFF5EB] lg:p-12 p-8 w-[90%] lg:w-[643px] rounded-sm shadow-lg">
+      <div className="relative mx-auto mt-10 lg:mt-0 lg:ml-[700px] lg:top-1/3 bg-[#FFF5EB] lg:p-12 p-8 w-[90%] lg:w-[643px] rounded-sm shadow-lg">
         {/* Badge */}
         <span className="text-sm font-semibold text-gray-600 uppercase tracking-wide mb-4 block">
           New Arrival
@@ -35,14 +36,14 @@ export default function Herosection() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
           tellus, luctus nec ullamcorper mattis.
         </p>
-
- 
+        <Link href="/shop">
         <button
           className="bg-[#B8860B] px-8 py-3 text-white text-sm font-medium  hover:bg-[#8B6508] transition focus:outline-none focus:ring-2 focus:ring-[#B8860B] focus:ring-offset-2"
           aria-label="Buy now button for the new collection"
         >
           BUY NOW
         </button>
+        </Link>
       </div>
     </div>
   );

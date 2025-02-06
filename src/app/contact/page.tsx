@@ -6,41 +6,37 @@ import Logo from '../../../public/Meubel-l.png';
 import Trophy from "../../../public/trophy 1.png"
 import Guarantee from "../../../public/guarantee.png"
 import Shipping from "../../../public/guarantee.png"
-import Suport from "../../../public/customer-support.png"
-
-
-
+import Support from "../../../public/customer-support.png"
+import Link from 'next/link';
 
   export default function FeaturesBanner() {
-   
-    
-
   return (
   
     <div>
   
 
       {/* Top Section */}
-      <div>
-        <Image src={Rectangle} alt="Image" height={316} className="top-[100px] w-full" />
 
-        <div className="absolute bottom-[70px] h-[443px]">
-          <Image src={Logo} alt="Meuble-1" className="ml-[682px]" />
-          <h2 className="w-[124px] h-[72px] ml-[622px] font-medium text-[48px] leading-[72px]">Contact</h2>
+      <div className="relative w-full">
+      {/* Background Image */}
+      <Image src={Rectangle} alt="Background Image" height={316} className="w-full object-cover" />
 
-          <span className="flex items-center">
-            <p className="w-[40px] h-[24px] top-[295px] ml-[660px] font-[500px] text-[16px] leading-6">Home</p>
-            <ChevronRightIcon
-              size={20}
-              className="w-5 h-5 sm:cursor-default cursor-pointer sm:hover:text-gray-500 ml-2"
-            />
-            <p className="w-[41px] h-[24px] top-[295px] left-[740px] font-light text-[16px] leading-6">Contact</p>
-          </span>
-          
+      {/* Content Box */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center ">
+        <Image src={Logo} alt="Meuble Logo" className="w-[70px] sm:w-[40px] " />
+
+        <h2 className="text-3xl  text-gray-800">Contact</h2>
+
+        {/* Breadcrumbs */}
+        <div className="flex items-center space-x-2  text-gray-600 text-sm sm:text-base">
+          <Link href = {"/"} > <p className="font-medium">Home</p></Link>
+          <ChevronRightIcon size={18} />
+          <p className="font-light">Contact</p>
         </div>
-      
-      
       </div>
+    </div>
+
+
       <div className="container mx-auto px-4 py-12 max-w-6xl">
       <div className="text-center mb-12">
         <h1 className="text-3xl font-bold mb-4">Get In Touch With Us</h1>
@@ -151,7 +147,7 @@ import Suport from "../../../public/customer-support.png"
 
           <button 
             type="submit"
-            className="w-[237px] px-4 py-2 text-white bg-[#B5873A] hover:bg-[#96702F] rounded-md transition-colors duration-200"
+            className="text-white w-[237px] px-4 py-2 text-white bg-[#B5873A] hover:bg-[#96702F] rounded-md transition-colors duration-200 font-bold  mt-4 py-2 px-4 rounded-lg shadow-md hover:scale-110 transition-transform duration-300 easa-in-out"
           >
             Submit
           </button>
@@ -160,42 +156,42 @@ import Suport from "../../../public/customer-support.png"
     
     </div>
 {/* end */}
-    <div className='w-full mx-auto h-[270px] top-[2699px] left-[-3px] justify-between pt-[100px] pb-[100px] mt-10 bg-[#FAF3EA]'>        
-   <div className='w-[1334px] h-[70px] justify-between flex  ml-14'>
-                     <div className='w-[337px] h-[70px] gap-[10px]  flex'>
-            <Image src={Trophy} alt="icon" width={60} height={60} />
-            <div className='w-[267px] h-[70px] gap-[2px] '>
-              <p className='w-[157px] h-[38px] font-semibold text-[25px] leading-9'>High Quality</p>
-              <p className='w-[267px] h-[30px] font-medium text-[20px] leading-[30px]'>crafted from top materials</p>
-            </div>
+<div className="w-full bg-[#FAF3EA] py-12">
+      <div className="max-w-6xl mx-auto flex flex-wrap justify-center md:justify-between gap-6 px-6">
+        {/* Feature Item */}
+        <div className="flex items-center gap-4 w-full md:w-auto">
+          <Image src={Trophy} alt="icon" width={60} height={60} />
+          <div>
+            <p className="text-xl font-semibold">High Quality</p>
+            <p className="text-gray-600 text-sm">Crafted from top materials</p>
           </div>
+        </div>
 
-           <div className='w-[328px] h-[70px] gap-[10px]  flex'>
-             <Image src={Guarantee} alt="icon" width={60} height={60} />
-             <div className='w-[267px] h-[70px] gap-[2px] '>
-               <p className='w-[258px] h-[38px] font-semibold text-[25px] leading-9'>Warrant Protection</p>
-               <p className='w-[126px] h-[30px] font-medium text-[20px] leading-[30px]'>Over 2 years</p>
-             </div>
-           </div>
+        <div className="flex items-center gap-4 w-full md:w-auto">
+          <Image src={Guarantee} alt="icon" width={60} height={60} />
+          <div>
+            <p className="text-xl font-semibold">Warranty Protection</p>
+            <p className="text-gray-600 text-sm">Over 2 years</p>
+          </div>
+        </div>
 
-           <div className='w-[244px] h-[70px] gap-[10px]  flex'>
-             <Image src={Shipping} alt="icon" width={60} height={60} />
-             <div className='w-[267px] h-[70px] gap-[2px] '>
-               <p className='w-[200px] h-[38px] font-semibold text-[25px] leading-9'>Free Shipping</p>
-               <p className='w-[267px] h-[30px] font-medium text-[20px] leading-[30px]'>Oder over 150 $ </p>
-             </div>
-           </div>
-          
-           <div className='w-[337px] h-[70px] gap-[10px]  flex'>
-             <Image src={Suport} alt="icon" width={60} height={60} />
-             <div className='w-[267px] h-[70px] gap-[2px] '>
-               <p className='w-[200px] h-[38px] font-semibold text-[25px] leading-9'>24 / 7 Support</p>
-               <p className='w-[267px] h-[30px] font-medium text-[20px] leading-[30px]'>Dedicated Support</p>
-             </div>
-           </div>
+        <div className="flex items-center gap-4 w-full md:w-auto">
+          <Image src={Shipping} alt="icon" width={60} height={60} />
+          <div>
+            <p className="text-xl font-semibold">Free Shipping</p>
+            <p className="text-gray-600 text-sm">Order over $150</p>
+          </div>
+        </div>
 
-         </div>
-       </div>
+        <div className="flex items-center gap-4 w-full md:w-auto">
+          <Image src={Support} alt="icon" width={60} height={60} />
+          <div>
+            <p className="text-xl font-semibold">24/7 Support</p>
+            <p className="text-gray-600 text-sm">Dedicated support</p>
+          </div>
+        </div>
+      </div>
+    </div>
     
       
     </div>

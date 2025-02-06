@@ -1,5 +1,4 @@
-import { sources } from "next/dist/compiled/webpack/webpack"
-import { title } from "process"
+
 import { defineType } from "sanity"
 
 export const product = defineType({
@@ -19,18 +18,17 @@ export const product = defineType({
             validation: (rule) => rule.required(),
             title:"Description",
         },
-        {
+    { 
         name: "slug",
-      title: "Slug",
-      type: "slug",
-      validation: (rule) => rule.required(),
-      options: {
-        source: "title", // Automatically generates a slug from the product name
-        maxLength: 96
-      },
-    
-      description: "Unique identifier for the product, used in URLs",
-    },
+        title: "slug", 
+        type: "slug", 
+        validation: (rule) => rule.required(),
+        options: { 
+            source: "title",
+            maxLength: 96,
+            
+         } 
+        },
         {
             name: "productImage",
             type: "image",
@@ -65,6 +63,14 @@ export const product = defineType({
             validation: (rule) => rule.required(),
             type:"boolean",
             title:"New Badge",
-        }
+        },
+        {
+            name: "rating",
+            type: "number",
+            title: "Rating",
+            description: "Rating of the product (1 to 5)",
+            validation: (Rule) => Rule.min(1).max(5),
+          }
+      
     ]
 })
