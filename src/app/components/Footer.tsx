@@ -71,7 +71,7 @@ const Footer = () => {
         <div className="w-full">
           <div className="border-t border-[#D9D9D9] mt-6 pt-6">
             <p className="font-[400] text-[16px] leading-[24px] text-black">
-              2023 furino. All rights reserved.........
+              2023 furino. All rights reserved..
             </p>
           </div>
         </div>
