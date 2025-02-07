@@ -86,9 +86,11 @@ export default function Header() {
 
           {/* Mobile Icons */}
           <div className="flex justify-center gap-6 py-3 border-t">
-            <Link href="/loggin">
-              <UserRoundCog className="cursor-pointer hover:text-blue-500" size={24} />
-            </Link>
+            
+            <UserButton />
+  <Link href="/login">
+    <UserRoundCog className="cursor-pointer hover:text-blue-500" size={24} />
+  </Link>
             <Search className="cursor-pointer hover:text-blue-500" size={24} />
             <Heart className="cursor-pointer hover:text-blue-500" size={24} />
             <Link href="/cart">
