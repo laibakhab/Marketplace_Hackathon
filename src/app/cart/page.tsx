@@ -186,7 +186,7 @@ const ShoppingCart = () => {
         <div className="flex items-center gap-4 w-full md:w-auto">
           <Image src={Support} alt="icon" width={60} height={60} />
           <div>
-            <p className="text-xl font-semibold">24/7 Supportt</p>
+            <p className="text-xl font-semibold">24/7 Support</p>
             <p className="text-gray-600 text-sm">Dedicated support</p>
           </div>
         </div>
